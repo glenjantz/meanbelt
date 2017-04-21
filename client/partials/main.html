@@ -1,0 +1,21 @@
+<input type="text"placeholder="mm-dd-yyyy" ng-model="bdayfilter.date">
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Edit link</th>
+        <th>Single View</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users | filter: bdayfilter.date">
+        <td>{{user.fname}} {{user.lname}}</td>
+        <td><a href="#!/edit/{{user._id}}">Edit this friend</td>
+        <td><a href="#!/show/{{user._id}}">Show this friend</td>
+          <td><form ng-submit="delete(user._id, user)">
+            <input type="submit" value="Delete this Friend"></td>
+          </form></td>
+      </tr>
+    </tbody>
+  </table>

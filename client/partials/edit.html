@@ -1,0 +1,8 @@
+<form ng-submit="update()">
+  First Name: <input type="text" ng-model="user.fname" ng-value="user.fname"><br>
+  Last Name: <input type="text" ng-model="user.lname" ng-value="user.lname"><br>
+  Birthday: {{user.bday | date: yyyy-MM-dd}}<br>
+  <input type="date" ng-model="user.bday" ng-value-"user.bday"><br>
+  <input type="submit" value="Edit">
+</form>
+<a href="#!/">go home</a>
