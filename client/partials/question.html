@@ -1,0 +1,12 @@
+<a href= "#!/dash">Go Home</a><br>
+<form ng-submit="logout()">
+  <input type="submit" value="logout">
+</form><br>
+
+<form ng-submit="addQuestion()">
+  Question: <textarea rows="8" cols="80" minlength="10" required ng-model="newQuestion.question"></textarea><br>
+  Description(optional): <textarea rows="8" cols="80" ng-model="newQuestion.description"></textarea><br>
+
+  <input type="submit" value="Submit">
+</form>
+<button ng-click="home()">Cancel</button>

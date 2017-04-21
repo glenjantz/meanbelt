@@ -1,27 +1,30 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(function ($routeProvider){
   $routeProvider
-  //index partial #!/
+
   .when('/', {
     templateUrl: 'partials/main.html',
     controller: 'newController'
   })
-  //create new user #!/new
-  .when('/new',{
-    templateUrl: 'partials/new.html',
-    controller: 'newController'
+
+  .when('/dash',{
+    templateUrl: 'partials/dash.html',
+    controller: 'dashController'
   })
-  //edit a user #!/edit/:id
-  .when('/edit/:id',{
-    templateUrl: 'partials/edit.html',
-    controller: 'editController'
+
+  .when('/question',{
+    templateUrl: 'partials/question.html',
+    controller: 'questionController'
   })
-  //show a single user #!/show/:id
-  .when('/show/:id',{
-    templateUrl: 'partials/show.html',
-    controller: 'editController'
+  .when('/answerq/:id',{
+    templateUrl: 'partials/answer.html',
+    controller: 'answerController'
   })
-  //redirect to index partial
+  .when('/showq/:id',{
+    templateUrl: 'partials/showq.html',
+    controller: 'answerController'
+  })
+
   .otherwise({
     redirectTo: '/'
   });

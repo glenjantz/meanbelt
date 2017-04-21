@@ -1,0 +1,14 @@
+<a href= "#!/dash">Go Home</a> | <a href= "#!/showq/{{question._id}}">Go back to Question</a> <br>
+<form ng-submit="logout()">
+  <input type="submit" value="logout">
+</form><br>
+<h1>{{question.question}}</h1>
+<p>{{question.description}}</p>
+<br>
+
+<form ng-submit="submitanswer()">
+  Your Answer: <textarea rows="8" cols="80" required minlength="5" ng-model="newAnswer.answer"></textarea><br>
+  Supporting details(optional): <textarea rows="8" cols="80" ng-model="newAnswer.details"></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+<button ng-click="home()">Cancel</button>

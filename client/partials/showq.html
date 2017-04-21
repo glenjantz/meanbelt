@@ -1,0 +1,17 @@
+<a href= "#!/dash">Go Home</a> |<a href= "#!/answerq/{{question._id}}">Answer this question</a> <br>
+<form ng-submit="logout()">
+  <input type="submit" value="logout">
+</form><br>
+<h1>{{question.question}}</h1>
+<p>{{question.description}}</p>
+<br>
+<div ng-repeat="answer in question.answers | orderBy: '-likecount'">
+  <p>{{answer.user}}:</p>
+  <p>{{answer.answer}}</p>
+  <p>{{answer.details}}</p>
+  <p>{{answer.likecount}} likes</p>
+  <form ng-submit="addlike(answer)">
+    <input type="submit" value="like">
+  </form>
+  <hr>
+</div>
